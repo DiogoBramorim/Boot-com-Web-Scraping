@@ -43,7 +43,7 @@ sair = WebDriverWait(driver, 10).until(
 sair.click()
 time.sleep(5)
 
-    EC.visibility_of_element_located((By.XPATH,'//*[@id="passwordNext"]/div/button/span'))
+    EC.visibility_of_element_located((By.XPATH,'LINK DO TIPO XPATH DO CAMPO'))
 )
 entrarG.click()
 
