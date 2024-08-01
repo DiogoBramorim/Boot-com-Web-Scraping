@@ -11,62 +11,38 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 driver = webdriver.Chrome()
-driver.get("http://www.floriano.ifpi.edu.br:8080/CortexMobileIFPI/login.jsf;jsessionid=e35791f25571204316c0d9990506")
+driver.get("URL DO SITE")
 
 username = WebDriverWait(driver, 10).until(
-    EC.visibility_of_element_located((By.XPATH, '//*[@id="j_username"]'))
+    EC.visibility_of_element_located((By.XPATH, 'LINK DO TIPO XPATH DO CAMPO'))
 )
-username.send_keys('09245915360')
+username.send_keys('login')
 
 password = WebDriverWait(driver, 10).until(
-    EC.visibility_of_element_located((By.XPATH, '//*[@id="j_password"]'))
+    EC.visibility_of_element_located((By.XPATH, 'LINK DO TIPO XPATH DO CAMPO'))
 )
-password.send_keys('09260@sari')
+password.send_keys('senha')
 
 login = WebDriverWait(driver, 10).until(
-    EC.visibility_of_element_located((By.XPATH,'//*[@id="j_idt6"]/div[2]/center/form/div[3]/div/input'))
+    EC.visibility_of_element_located((By.XPATH,'LINK DO TIPO XPATH DO CAMPO'))
 )
 login.click()
 acesso = WebDriverWait(driver, 10).until(
-    EC.visibility_of_element_located((By.XPATH,'//*[@id="j_idt7:btnGerenciaMinhaConta"]'))
+    EC.visibility_of_element_located((By.XPATH,'LINK DO TIPO XPATH DO CAMPO'))
 )
 acesso.click()
 
 solicitar = WebDriverWait(driver, 10).until(
-    EC.visibility_of_element_located((By.XPATH,'//*[@id="j_idt7:btnCompraTicketUsuario"]'))
+    EC.visibility_of_element_located((By.XPATH,'LINK DO TIPO XPATH DO CAMPO'))
 )
 solicitar.click()
 time.sleep(5)
 sair = WebDriverWait(driver, 10).until(
-    EC.visibility_of_element_located((By.XPATH,'//*[@id="j_idt7:menuPrin"]/li[4]/a'))
+    EC.visibility_of_element_located((By.XPATH,'LINK DO TIPO XPATH DO CAMPO'))
 )
 sair.click()
-
 time.sleep(5)
 
-driver.get("https://www.google.com/intl/pt-BR/gmail/about/")
-entrar = WebDriverWait(driver, 10).until(
-    EC.visibility_of_element_located((By.XPATH,'/html/body/header/div/div/div/a[2]'))
-)
-entrar.click()
-
-contaN = WebDriverWait(driver, 10).until(
-    EC.visibility_of_element_located((By.XPATH,'//*[@id="identifierId"]'))
-)
-contaN.send_keys('diogobamorim20@gmail.com')
-
-ir = WebDriverWait(driver, 10).until(
-    EC.visibility_of_element_located((By.XPATH,'//*[@id="identifierNext"]/div/button/span'))
-)
-ir.click()
-
-senha = WebDriverWait(driver, 10).until(
-    EC.visibility_of_element_located((By.XPATH,'//*[@id="password"]/div[1]/div/div[1]/input'))
-)
-senha.click()
-senha.send_keys('Dio@2006')
-
-entrarG = WebDriverWait(driver, 10).until(
     EC.visibility_of_element_located((By.XPATH,'//*[@id="passwordNext"]/div/button/span'))
 )
 entrarG.click()
